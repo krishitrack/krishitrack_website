@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Privacy Policy for KrishiTrack tractor SaaS application. Learn how we handle GPS logging, payment details, and offline local cache.">
+    <meta name="description" content="Privacy Policy for KrishiTrack tractor SaaS application. Learn how we handle payment details and offline local cache.">
     <title>Privacy Policy — KrishiTrack SaaS</title>
     
     <!-- Premium Styles & Fonts -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="assets/logo.svg">
+    <link rel="icon" type="image/png" href="assets/icon.png">
 </head>
 <body>
 
@@ -21,7 +21,7 @@
     <header class="navbar scrolled">
         <div class="nav-container">
             <a href="index.html" class="logo" id="nav-logo">
-                <img src="assets/logo.svg" alt="KrishiTrack Logo" class="logo-img">
+                <img src="assets/icon.png" alt="KrishiTrack Logo" class="logo-img">
                 <span>KrishiTrack</span>
             </a>
             
@@ -51,7 +51,7 @@
         <article class="doc-content">
             <section>
                 <h2>1. Introduction</h2>
-                <p>Welcome to KrishiTrack ("we", "our", "us"). We are committed to protecting the privacy and security of our users—including tractor fleet owners, operators, and their agricultural clients. This Privacy Policy explains how we collect, use, store, and share information when you use our mobile and web applications (the "Service").</p>
+                <p>Welcome to KrishiTrack ("we", "our", "us"). We are committed to protecting the privacy and security of our users—including tractor owners and their agricultural clients. This Privacy Policy explains how we collect, use, store, and share information when you use our mobile and web applications (the "Service").</p>
                 <p>By accessing or using KrishiTrack, you agree to the collection and use of information in accordance with this policy. If you do not agree, please do not use our Service.</p>
             </section>
 
@@ -59,11 +59,11 @@
                 <h2>2. Information We Collect</h2>
                 <p>To provide high-quality fleet management and session tracking, we collect several categories of information:</p>
                 <ul>
-                    <li><strong>Account Credentials:</strong> Full name, business details, phone number, email address, password, and profiles created for your agricultural drivers.</li>
-                    <li><strong>Tractor Fleet Details:</strong> Model numbers, license numbers, rates, and fuel efficiency metrics configured inside the dashboard.</li>
-                    <li><strong>GPS Location Mapping:</strong> Our Service accesses your device’s GPS location. This is necessary to measure field layouts, map areas ploughed, record harvesting sessions, and generate billing reports. Location mapping may occur in the background while logging active sessions.</li>
-                    <li><strong>Operational Session Logs:</strong> Duration of work (hours), acres worked, fuel usage, and calculated cost amounts logged by operators.</li>
-                    <li><strong>Offline Caching Data:</strong> When working offline, operational logs and client details are cached locally on your device (using Hive/SQLite). Once network coverage is restored, this local data is synchronized to our servers.</li>
+                    <li><strong>Account Credentials:</strong> Full name, business details, phone number, email address, password, and profiles created for you and your clients.</li>
+                    <li><strong>Tractor Fleet Details:</strong> Model numbers, rates, and fuel efficiency metrics configured inside your dashboard.</li>
+                    <li><strong>Operational Session Logs:</strong> Duration of work (hours), acres worked, fuel usage, and calculated cost amounts logged manually by owners.</li>
+                    <li><strong>Manual Payment Records:</strong> Details of payments made by clients (amount, date, payment method such as cash, cheque, or online transfer) as logged manually by owners for bookkeeping. We do not collect or process credit cards or financial transaction data in the app.</li>
+                    <li><strong>Offline Caching Data:</strong> When working offline, operational logs and client details are cached locally on your device (using Hive). Once network coverage is restored, this local data is synchronized to our servers.</li>
                 </ul>
             </section>
 
@@ -71,9 +71,9 @@
                 <h2>3. How We Use Your Information</h2>
                 <p>We use the collected information to operate, maintain, and optimize KrishiTrack, including:</p>
                 <ul>
-                    <li>Facilitating secure owner and driver authentication.</li>
+                    <li>Facilitating secure owner and client authentication.</li>
                     <li>Tracking tractor session progress and calculating service billings.</li>
-                    <li>Generating downloadable PDF performance, client payment, and tax reports.</li>
+                    <li>Generating downloadable PDF performance, client payment, and statement reports.</li>
                     <li>Enabling the offline database to correctly sync and reconcile queues with Cloud Firestore.</li>
                     <li>Providing customer support and troubleshooting application crashes.</li>
                 </ul>
@@ -82,7 +82,7 @@
             <section>
                 <h2>4. Data Storage and Security</h2>
                 <p>All cloud-synchronized data is stored securely in Firebase Firestore. We implement strict administrative, technical, and physical safeguards to prevent unauthorized access, alteration, or deletion of your fleet records.</p>
-                <p>Your local offline data is encrypted and kept in sandbox directories on your mobile device. However, we recommend securing your device with PIN codes or biometric locks to prevent unauthorized local file access.</p>
+                <p>Your local offline data is kept in sandbox directories on your mobile device. However, we recommend securing your device with PIN codes or biometric locks to prevent unauthorized local file access.</p>
             </section>
 
             <section>
@@ -94,24 +94,22 @@
                 <h2>6. Your Controls and Rights</h2>
                 <p>You maintain full authority over your data. Inside the dashboard, you may:</p>
                 <ul>
-                    <li>Modify or delete driver profiles, client directories, and payment records.</li>
-                    <li>Toggle device location and GPS tracking permissions via operating system preferences (disabling GPS mapping may limit session calculation features).</li>
-                    <li>Request full deletion of your business subscription account and all associated cloud-synced databases by contacting support.</li>
+                    <li>Modify or delete client directories, session logs, and payment records.</li>
+                    <li>Request full deletion of your business account and all associated cloud-synced databases by contacting support.</li>
                 </ul>
             </section>
 
             <section>
                 <h2>7. Policy Modifications</h2>
-                <p>We may update this Privacy Policy from time to time. We will notify you of any material changes by updating the "Last Updated" date at the top of this document or by sending a push alert notification directly in the mobile app dashboard.</p>
+                <p>We may update this Privacy Policy from time to time. We will notify you of any material changes by updating the "Last Updated" date at the top of this document.</p>
             </section>
 
             <section>
                 <h2>8. Support Contact</h2>
-                <p>If you have any questions or privacy concerns regarding KrishiTrack or location tracking, please contact our privacy compliance team:</p>
+                <p>If you have any questions or privacy concerns regarding KrishiTrack, please contact our support team:</p>
                 <p style="margin-top: 10px;">
-                    <strong>Email:</strong> support@krishitrack.com<br>
-                    <strong>Phone:</strong> +1 (800) 555-TRACTOR<br>
-                    <strong>Address:</strong> KrishiTrack Tech Labs, 404 Agriculture Way, Suite 10, Des Moines, IA
+                    <strong>Email:</strong> nxgentractorservices@gmail.com<br>
+                    <strong>Phone:</strong> +977-9763878278<br>
                 </p>
             </section>
         </article>
@@ -122,10 +120,10 @@
         <div class="footer-container">
             <div class="footer-info">
                 <a href="index.html" class="footer-logo">
-                    <img src="assets/logo.svg" alt="KrishiTrack Logo" class="logo-img">
+                    <img src="assets/icon.png" alt="KrishiTrack Logo" class="logo-img">
                     <span>KrishiTrack</span>
                 </a>
-                <p>Providing cutting-edge SaaS management dashboards and offline tracking applications for fleet tractor owners and their operators.</p>
+                <p>Providing cutting-edge SaaS management dashboards and offline tracking applications for fleet tractor owners and their clients.</p>
                 <div class="social-links">
                     <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
                     <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -165,7 +163,7 @@
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 KrishiTrack Inc. All rights reserved.</p>
+            <p>&copy; 2026 KrishiTrack. All rights reserved.</p>
             <div class="footer-bottom-links">
                 <a href="privacy.html" id="link-privacy">Privacy Policy</a>
                 <a href="terms.html" id="link-terms">Terms & Conditions</a>
