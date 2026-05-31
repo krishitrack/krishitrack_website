@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KrishiTrack is a premium tractor service SaaS for fleet owners and agricultural clients. Log fields, track session earnings, and collect payments—fully functional offline.">
+    <title>KrishiTrack — Smart Tractor Service SaaS & Offline Tracker</title>
+    
+    <!-- Premium Styles & Fonts -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/logo.svg">
+</head>
+<body>
+
+    <!-- BACKGROUND LIGHT ORBS -->
+    <div class="bg-blur-orb orb-1"></div>
+    <div class="bg-blur-orb orb-2"></div>
+    <div class="bg-blur-orb orb-3"></div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo" id="nav-logo">
+                <img src="assets/logo.svg" alt="KrishiTrack Logo" class="logo-img">
+                <span>KrishiTrack</span>
+            </a>
+            
+            <nav class="nav-links" id="nav-menu">
+                <a href="#features" class="nav-item">Features</a>
+                <a href="#calculator" class="nav-item">Earnings Calculator</a>
+                <a href="#sync-demo" class="nav-item">Offline Sync</a>
+                <a href="#pricing" class="nav-item">Pricing</a>
+                <a href="#contact" class="btn-primary">Request Demo</a>
+            </nav>
+
+            <button class="nav-toggle" id="menu-btn" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="section-tag">SMART AGRICULTURE SAAS</span>
+            <h1>Revolutionize Your Tractor Fleet with <span class="gradient-accent-text">Precision Data</span></h1>
+            <p>The ultimate mobile and desktop platform for tractor fleet owners and agricultural clients. Log acres, track live field sessions, manage client invoices, and monitor profits—fully functional in remote fields with zero cell service.</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn-primary" id="hero-cta-primary">Get Started Free</a>
+                <a href="#features" class="btn-secondary" id="hero-cta-secondary">Explore Platform</a>
+            </div>
+        </div>
+        <div class="hero-image-container">
+            <img src="assets/hero_mockup.png" alt="KrishiTrack Premium App Dashboard Mockup" class="hero-image" id="hero-mockup-img">
+        </div>
+    </section>
+
+    <!-- CORE FEATURES SECTION -->
+    <section class="section" id="features">
+        <div class="section-header">
+            <span class="section-tag">POWERFUL FEATURES</span>
+            <h2>Built Specifically for Modern Agricultural Fleets</h2>
+            <p>No more paper logs or messy WhatsApp bookkeeping. Manage your tractor operations using high-performance specialized tools.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="glass-card feature-card" id="feat-1">
+                <span class="feature-icon"><i class="fa-solid fa-clock-rotate-left"></i></span>
+                <h3>Live Session Tracking</h3>
+                <p>Track field sessions in real time. Log precise tractor hours, acres completed, fuel usage, and calculate costs dynamically for client billing.</p>
+            </div>
+            <div class="glass-card feature-card" id="feat-2">
+                <span class="feature-icon"><i class="fa-solid fa-cloud-arrow-down"></i></span>
+                <h3>Offline-First Architecture</h3>
+                <p>Deep agricultural fields often have no cell reception. KrishiTrack works completely offline, queuing logs locally and auto-syncing to Cloud Firestore when you return to coverage.</p>
+            </div>
+            <div class="glass-card feature-card" id="feat-3">
+                <span class="feature-icon"><i class="fa-solid fa-receipt"></i></span>
+                <h3>Client Billing & Invoicing</h3>
+                <p>Generate digital invoices for services instantly. Send them to clients via SMS, WhatsApp, or email, and monitor pending receivables in your dashboard.</p>
+            </div>
+            <div class="glass-card feature-card" id="feat-4">
+                <span class="feature-icon"><i class="fa-solid fa-chart-column"></i></span>
+                <h3>Interactive Analytics</h3>
+                <p>Visualize machine health, session counts, client margins, and monthly revenue metrics using gorgeous charts optimized for mobile screens.</p>
+            </div>
+            <div class="glass-card feature-card" id="feat-5">
+                <span class="feature-icon"><i class="fa-solid fa-file-pdf"></i></span>
+                <h3>Tax & Service Reports</h3>
+                <p>Export elegant, structured PDF reports detailing services, client payments, and driver field summaries with a single tap for tax compliance.</p>
+            </div>
+            <div class="glass-card feature-card" id="feat-6">
+                <span class="feature-icon"><i class="fa-solid fa-users-gear"></i></span>
+                <h3>Multi-Tenant Fleet Control</h3>
+                <p>Manage multiple drivers, farm sites, and tractors from one central dashboard. Assign individual sessions and view real-time fleet assignments.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE PROFIT CALCULATOR -->
+    <section class="section" id="calculator">
+        <div class="section-header">
+            <span class="section-tag">PROFITABILITY ESTIMATOR</span>
+            <h2>Estimate Your Field Earnings Instantly</h2>
+            <p>Adjust the sliders below to calculate your tractor service earnings, fuel expenditures, and net margins in real time.</p>
+        </div>
+
+        <div class="glass-panel calc-container" id="profit-calc-widget">
+            <!-- SLIDER INPUTS -->
+            <div class="calc-inputs">
+                <div class="calc-form-group">
+                    <label for="calc-rate">Service Rate per Hour: <span id="calc-rate-val">$45</span></label>
+                    <input type="range" id="calc-rate" class="slider-input" min="20" max="250" step="5" value="75">
+                </div>
+                
+                <div class="calc-form-group">
+                    <label for="calc-hours">Logged Work Duration: <span id="calc-hours-val">10 hrs</span></label>
+                    <input type="range" id="calc-hours" class="slider-input" min="1" max="150" step="1" value="45">
+                </div>
+                
+                <div class="calc-form-group">
+                    <label for="calc-fuel">Tractor Fuel Cost per Hour: <span id="calc-fuel-val">$15/hr</span></label>
+                    <input type="range" id="calc-fuel" class="slider-input" min="5" max="80" step="1" value="18">
+                </div>
+            </div>
+
+            <!-- CALCULATED BREAKDOWN -->
+            <div class="calc-results" id="profit-results-panel">
+                <div class="result-item" id="gross-res">
+                    <div class="label">Gross Income</div>
+                    <div class="value" id="res-gross">$0</div>
+                </div>
+                <div class="result-item" id="fuel-res">
+                    <div class="label">Fuel Expenditure</div>
+                    <div class="value" id="res-fuel">$0</div>
+                </div>
+                <div class="result-item net-profit" id="net-res">
+                    <div class="label">Net profit margin</div>
+                    <div class="value" id="res-net">$0</div>
+                </div>
+                
+                <!-- Circular margin progress -->
+                <div class="margin-circle-container">
+                    <div class="progress-ring">
+                        <svg width="80" height="80">
+                            <circle class="progress-ring-circle-bg" cx="40" cy="40" r="36" />
+                            <circle class="progress-ring-circle" id="progress-ring-circle" cx="40" cy="40" r="36" />
+                        </svg>
+                        <div class="progress-text" id="margin-percentage">0%</div>
+                    </div>
+                    <div class="margin-description">
+                        <h4>Net Margin Percentage</h4>
+                        <p>High margins indicate efficient fleet fuel and operation management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIVE OFFLINE SYNC SIMULATOR -->
+    <section class="section" id="sync-demo">
+        <div class="section-header">
+            <span class="section-tag">ADVANCED AGRICULTURE TECH</span>
+            <h2>Try Our Live Offline Sync Simulator</h2>
+            <p>Toggle "Offline Mode" to simulate remote fields. Log sessions and watch them queue. Turn "Online Mode" back on and watch them sync with Firestore instantly!</p>
+        </div>
+
+        <div class="glass-panel sync-container" id="sync-simulation-box">
+            <!-- STATUS TOPBAR -->
+            <div class="sync-header">
+                <div class="sync-status">
+                    <span class="status-dot" id="status-dot"></span>
+                    <span id="status-text">ONLINE MODE</span>
+                </div>
+                <button class="btn-toggle-connection" id="btn-connection">🔌 Switch to Offline</button>
+            </div>
+
+            <!-- BODY PANEL -->
+            <div class="sync-demo-body">
+                <div class="sync-actions">
+                    <button class="btn-action" id="btn-add-session-1">
+                        <span class="icon">🚜</span>
+                        <div>
+                            <strong>Add Tillage Log</strong>
+                            <p style="font-size:0.75rem; color:var(--text-muted); margin-top:2px;">David Miller ($45/Ac)</p>
+                        </div>
+                    </button>
+                    <button class="btn-action" id="btn-add-session-2">
+                        <span class="icon">🌾</span>
+                        <div>
+                            <strong>Add Harvester Log</strong>
+                            <p style="font-size:0.75rem; color:var(--text-muted); margin-top:2px;">Sarah Higgins ($110/hr)</p>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- QUEUE PANEL representation -->
+                <div class="queue-panel">
+                    <div class="queue-title">
+                        <span>Offline Buffer Queue</span>
+                        <span class="queue-badge" id="queue-count">0</span>
+                    </div>
+                    <div class="queue-list" id="queue-list">
+                        <div class="queue-empty-msg" id="queue-empty">
+                            No logs queued. Click one of the buttons to log work!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SAAS PRICING TIERS -->
+    <section class="section" id="pricing">
+        <div class="section-header">
+            <span class="section-tag">TIERED PLAN SELECTION</span>
+            <h2>Simple, Transparent SaaS Pricing</h2>
+            <p>Choose the billing plan that aligns with your agricultural operations, tractor count, and billing requirements.</p>
+        </div>
+
+        <div class="pricing-grid">
+            <!-- STARTER -->
+            <div class="glass-card pricing-card" id="price-starter">
+                <div class="price-header">
+                    <div class="tier-name">Starter Plan</div>
+                    <div class="price">$19<span>/mo</span></div>
+                </div>
+                <ul class="price-features">
+                    <li><span class="check">✓</span> 1 Tractor Logged</li>
+                    <li><span class="check">✓</span> Offline-First Session Tracking</li>
+                    <li><span class="check">✓</span> PDF Earnings Invoices</li>
+                    <li class="disabled"><span class="check">✓</span> Multi-Tenant Driver Access</li>
+                    <li class="disabled"><span class="check">✓</span> Live GPS Mapping Logs</li>
+                    <li class="disabled"><span class="check">✓</span> Priority API & Phone Support</li>
+                </ul>
+                <a href="#contact" class="btn-secondary" id="btn-pricing-starter">Choose Starter</a>
+            </div>
+
+            <!-- PRO / OWNER -->
+            <div class="glass-card pricing-card popular" id="price-owner">
+                <div class="popular-badge">Most Popular Plan</div>
+                <div class="price-header">
+                    <div class="tier-name">Fleet Owner Pro</div>
+                    <div class="price">$49<span>/mo</span></div>
+                </div>
+                <ul class="price-features">
+                    <li><span class="check">✓</span> Up to 8 Tractor Fleets</li>
+                    <li><span class="check">✓</span> Offline-First Session Tracking</li>
+                    <li><span class="check">✓</span> PDF Billing & Earnings Invoices</li>
+                    <li><span class="check">✓</span> Multi-Tenant Driver Access</li>
+                    <li><span class="check">✓</span> Live GPS Mapping Logs</li>
+                    <li class="disabled"><span class="check">✓</span> Custom Domain & API Integrations</li>
+                </ul>
+                <a href="#contact" class="btn-primary" id="btn-pricing-owner">Get Pro Access</a>
+            </div>
+
+            <!-- ENTERPRISE -->
+            <div class="glass-card pricing-card" id="price-fleet">
+                <div class="price-header">
+                    <div class="tier-name">Enterprise Fleet</div>
+                    <div class="price">$119<span>/mo</span></div>
+                </div>
+                <ul class="price-features">
+                    <li><span class="check">✓</span> Unlimited Fleet Tractors</li>
+                    <li><span class="check">✓</span> Offline-First Session Tracking</li>
+                    <li><span class="check">✓</span> PDF Invoices & Automated Accounting</li>
+                    <li><span class="check">✓</span> Multi-Tenant Driver Access & Roles</li>
+                    <li><span class="check">✓</span> Custom GPS API Integration</li>
+                    <li><span class="check">✓</span> Dedicated Account Manager</li>
+                </ul>
+                <a href="#contact" class="btn-secondary" id="btn-pricing-fleet">Contact Fleets</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT / BOOK DEMO FORM -->
+    <section class="section" id="contact">
+        <div class="section-header">
+            <span class="section-tag">GET IN TOUCH</span>
+            <h2>Book a Personal KrishiTrack Demo</h2>
+            <p>Sign up today and get 14 days of unrestricted Pro Fleet access. No credit card required.</p>
+        </div>
+
+        <div class="glass-panel contact-container">
+            <form class="contact-form" id="contact-form">
+                <div class="form-group">
+                    <label for="form-name">Your Full Name</label>
+                    <input type="text" id="form-name" class="form-input" placeholder="e.g. Robert Smith" required>
+                </div>
+                <div class="form-group">
+                    <label for="form-email">Work Email Address</label>
+                    <input type="email" id="form-email" class="form-input" placeholder="e.g. robert@fleetowner.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="form-tractors">Total Fleet Tractors</label>
+                    <input type="number" id="form-tractors" class="form-input" min="1" max="500" placeholder="e.g. 5" required>
+                </div>
+                <div class="form-group">
+                    <label for="form-msg">Specific Questions or Fleet Setup Details</label>
+                    <textarea id="form-msg" class="form-input" placeholder="Tell us about your fleet..." required></textarea>
+                </div>
+                <button type="submit" class="btn-primary" id="btn-submit-form">Request Free Demo Link</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <a href="index.html" class="footer-logo">
+                    <img src="assets/logo.svg" alt="KrishiTrack Logo" class="logo-img">
+                    <span>KrishiTrack</span>
+                </a>
+                <p>Providing cutting-edge SaaS management dashboards and offline tracking applications for fleet tractor owners and their operators.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#calculator">Calculator</a></li>
+                    <li><a href="#sync-demo">Offline Sync</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press Kit</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">API Docs</a></li>
+                    <li><a href="#">System Status</a></li>
+                    <li><a href="#">FAQ Guide</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 KrishiTrack Inc. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="privacy.html" id="link-privacy">Privacy Policy</a>
+                <a href="terms.html" id="link-terms">Terms & Conditions</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MAIN JAVASCRIPT -->
+    <script src="js/main.js"></script>
+</body>
+</html>
